@@ -41,7 +41,7 @@ function select(arr){
     return arr;
 }
 /*
- * 插入排序
+ * 直接插入排序
  * 从待排序组中选出元素插入有序组中 稳定排序
  * 最差时间复杂度O(n^2),平均时间复杂度O(n^2)  空间复杂度O(1) 稳定排序
  */
@@ -151,7 +151,41 @@ function quick(arr,l,r) {
 var arr=[1,4,3,5,3,4,3,5,5,666,5,4347,8,8,9,7,67,6,77];
 quick(arr,0,arr.length-1);
 console.log(arr);
+/*
+    第k大的数
+public static int partition(int[] array, int left, int right) {
+    int k = array[left];
+    int i = left;
+    int j = right;
+    while (j > i) {
+        while (array[j] < k && j > i) {
+            j--;
+        }
+        if (j > i) {
+            array[i] = array[j];
+            i++;
+        }
+        while (array[i] > k && j > i) {
+            i++;
+        }
+        if (j > i) {
+            array[j] = array[i];
+            j--;
+        }
+    }
+    array[i] = k;
+    return i;
+}
 
+public static void quickSort(int[] array, int left, int right) {
+    if (left >= right) {
+        return;
+    }
+    int i = partition(array, left, right);
+    quickSort(array, left, i - 1);
+    quickSort(array, i + 1, right);
+}
+*/
 
 
 

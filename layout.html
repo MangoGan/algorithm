@@ -1,0 +1,71 @@
+<!--
+<body>
+<div id="left">左列定宽</div>
+<div id="right">右列自适应</div>
+</body>
+#left {
+background-color: #f00;
+float: left;
+width: 100px;
+height: 500px;
+}
+#right {
+background-color: #0f0;
+height: 500px;
+margin-left: 100px; /*大于等于#left的宽度*/
+}
+-->
+<!--
+<div id="left">左列定宽</div>
+<div id="right-fix">
+    <div id="right">右列自适应</div>
+</div>
+#left {
+background-color: #f00;
+float: left;
+width: 100px;
+height: 500px;
+}
+#right-fix {
+float: right;
+width: 100%;
+margin-left: -100px; /*正值大于或等于#left的宽度,才能显示在同一行*/
+}
+#right{
+margin-left: 100px; /*大于或等于#left的宽度*/
+background-color: #0f0;
+height: 500px;
+}-->
+<!--
+<div id="parent">
+    <div id="left">左列不定宽</div>
+    <div id="right">右列自适应</div>
+</div>
+#parent{
+display: flex;
+}
+#left { /*不设宽度*/
+margin-right: 10px;
+height: 500px;
+background-color: #f00;
+}
+#right {
+height: 500px;
+background-color: #0f0;
+flex: 1;  /*均分#parent剩余的部分*/
+}-->
+<!--
+写三角形
+<style type="text/css">
+    #mydiv
+    {
+        height: 0px;
+        width: 0px;
+        border-left: 50px solid  transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 100px solid red;
+    }
+</style>
+<body>
+<div id="mydiv"></div>
+</body>-->
